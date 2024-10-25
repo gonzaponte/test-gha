@@ -29,3 +29,15 @@ jobs:
         echo "HOOOOOOO"
         ls
         echo "PRRRRRRRRR"
+
+  job3:
+    runs-on: ubuntu-latest
+    needs: [job1, job2]
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Job 3
+      run: |
+        echo "HUUUUUU"
+        pwd
+        echo "PRRRRRRRRR"
