@@ -19,5 +19,6 @@ jobs:
     needs: [job1]
     steps:
     - uses: actions/checkout@v2
-    - name Job 2
+
+    - name: Job 2
       run: echo "HOOOOOOO"
