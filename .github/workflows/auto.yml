@@ -12,7 +12,11 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Job 1
-      run: echo "HIIIIII"
+      run: |
+        echo "HIIIIII"
+        mkdir AAAA
+        ls
+        echo "PRRRRRRRRR"
 
   job2:
     runs-on: ubuntu-latest
@@ -21,4 +25,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Job 2
-      run: echo "HOOOOOOO"
+      run: |
+        echo "HOOOOOOO"
+        ls
+        echo "PRRRRRRRRR"
