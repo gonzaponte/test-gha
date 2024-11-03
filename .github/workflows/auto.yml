@@ -47,6 +47,5 @@ jobs:
 
     - name: Job 3
       run: |
-        echo "HUUUUUU"
-        pwd
-        echo "PRRRRRRRRR"
+        echo "hola\nola\ncaracola\n" > out
+        alias check=``
