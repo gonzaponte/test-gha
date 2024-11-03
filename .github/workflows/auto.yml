@@ -15,7 +15,16 @@ jobs:
       run: |
         echo "HIIIIII"
         mkdir AAAA
+        export MYENVVAR=1234
         ls
+        echo $MYENVVAR
+        echo "PRRRRRRRRR"
+
+    - name: Job 1.5
+      run: |
+        echo "1.5 1.5 1.5"
+        ls
+        echo $MYENVVAR
         echo "PRRRRRRRRR"
 
   job2:
@@ -29,3 +38,14 @@ jobs:
         echo "HOOOOOOO"
         ls
         echo "PRRRRRRRRR"
+
+  job3:
+    runs-on: ubuntu-latest
+    needs: [job1, job2]
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Job 3
+      run: |
+        echo "hola\nola\ncaracola\n" > out
+        alias check=``
